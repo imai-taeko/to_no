@@ -1,0 +1,31 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+// ======================================
+// Header
+// ======================================
+.l-header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  background-color: $color-white;
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+
+  @include mq {
+    min-height: 80px;
+  }
+}
+
+.l-header__logo {
+  width: 140px;
+
+  @include mq {
+    width: 180px;
+  }
+}

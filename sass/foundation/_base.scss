@@ -1,0 +1,43 @@
+@use "variables" as *;
+
+// ======================================
+// Base
+// ======================================
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $color-white;
+  color: $color-text;
+  font-family: $font-base;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  display: block;
+}
+
+a {
+  transition:
+    opacity $transition-base,
+    color $transition-base,
+    background-color $transition-base;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+img {
+  width: 100%;
+}
+
+address {
+  font-style: normal;
+}

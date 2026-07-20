@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #333;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  display: block;
+}
+
+a {
+  transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+img {
+  width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+.l-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+@media screen and (min-width: 768px) {
+  .l-container {
+    padding-inline: 40px;
+  }
+}
+
+.l-header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+@media screen and (min-width: 768px) {
+  .l-header__inner {
+    min-height: 80px;
+  }
+}
+
+.l-header__logo {
+  width: 140px;
+}
+@media screen and (min-width: 768px) {
+  .l-header__logo {
+    width: 180px;
+  }
+}
+
+.l-footer {
+  padding-block: 40px;
+  background-color: #355c4d;
+  color: #fff;
+}
+
+.l-footer__copyright {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 52px;
+  padding: 12px 24px;
+  border: 1px solid #355c4d;
+  border-radius: 999px;
+  background-color: #355c4d;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.c-button:hover {
+  background-color: #fff;
+  color: #355c4d;
+  opacity: 1;
+}
+
+.c-card {
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.c-card__image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.c-card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c-card__body {
+  padding: 20px;
+}
+
+.c-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.c-card__text {
+  margin-top: 12px;
+}
+
+.c-section-title {
+  color: #355c4d;
+  font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .c-section-title {
+    font-size: 4rem;
+  }
+}

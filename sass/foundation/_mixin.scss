@@ -1,0 +1,11 @@
+@use "variables" as *;
+
+// ======================================
+// Media Query
+// ======================================
+@mixin mq {
+  @media screen and (min-width: $breakpoint-pc) {
+    @content;
+  }
+}
+

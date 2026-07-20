@@ -1,0 +1,15 @@
+@use "../foundation/variables" as *;
+
+// ======================================
+// Footer
+// ======================================
+.l-footer {
+  padding-block: 40px;
+  background-color: $color-main;
+  color: $color-white;
+}
+
+.l-footer__copyright {
+  font-size: 1.2rem;
+  text-align: center;
+}
