@@ -205,13 +205,16 @@
     display: block;
     margin: clamp(120px, 14vw, 170px) 0 0;
     color: $color-white;
-    font-family: $font-serif;
-    font-size: clamp(1.2rem, 1.15vw, 1.7rem);
-    font-weight: 500;
-    line-height: 2;
+    font-family: "Kaisei Tokumin", serif;
+    font-size: clamp(1.3rem, 1.3vw, 1.9rem);
+    font-weight: 400;
+    line-height: 2.5;
     letter-spacing: 0.16em;
     text-shadow: 0 2px 4px rgba($color-black, 0.55);
     writing-mode: vertical-rl;
+
+    position: relative;
+top: -20px;
   }
 
   .p-mv__title {
