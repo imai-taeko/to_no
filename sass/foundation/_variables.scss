@@ -1,18 +1,16 @@
-// =====★★★仮の設定★★★======================================
-// Color
 // ======================================
-$color-main: #355c4d;
-$color-sub: #e8e0cf;
-$color-accent: #9b4f35;
-
-$color-text: #333;
+// Variables
+// ======================================
+$color-main: #344766;
+$color-main-dark: #253754;
+$color-cream: #fbf6c6;
+$color-cream-light: #fffceb;
+$color-blue: #061d8b;
+$color-red: #cc2929;
+$color-text: #222;
 $color-white: #fff;
 $color-black: #000;
-$color-bg: #f8f6f1;
 
-// ======================================
-// Font
-// ======================================
 $font-base:
   "Noto Sans JP",
   "Hiragino Kaku Gothic ProN",
@@ -27,13 +25,7 @@ $font-serif:
   "Hiragino Mincho ProN",
   serif;
 
-// ======================================
-// Layout
-// ======================================
 $container-width: 1200px;
 $breakpoint-pc: 768px;
 
-// ======================================
-// Transition
-// ======================================
 $transition-base: 0.3s ease;

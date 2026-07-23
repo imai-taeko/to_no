@@ -4,3 +4,250 @@
 // ======================================
 // Top Page
 // ======================================
+.p-top {
+  background-color: $color-main;
+}
+
+.p-top__contents {
+  position: relative;
+  z-index: 4;
+  padding: 0 14px 60px;
+  background-color: $color-main;
+}
+
+.p-mv {
+  position: relative;
+  overflow: hidden;
+  background-color: $color-main;
+}
+
+.p-mv__visual {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.p-mv__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% center;
+}
+
+.p-mv__map {
+  position: absolute;
+  top: 22px;
+  left: -18px;
+  z-index: 2;
+  width: clamp(190px, 47vw, 280px);
+}
+
+.p-mv__map img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 5px rgba($color-black, 0.28));
+}
+
+.p-mv__body {
+  position: absolute;
+  top: 44px;
+  right: 20px;
+  z-index: 3;
+}
+
+.p-mv__lead {
+  display: none;
+}
+
+.p-mv__title {
+  width: clamp(154px, 39vw, 230px);
+  margin: 0;
+}
+
+.p-mv__title img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(3px 4px 3px rgba($color-black, 0.42));
+}
+
+.p-mv__stamp {
+  position: absolute;
+  right: -17px;
+  bottom: 28px;
+  z-index: 5;
+  width: clamp(130px, 34vw, 190px);
+}
+
+.p-mv__stamp img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 3px 4px rgba($color-black, 0.26));
+  transform: rotate(-7deg);
+}
+
+.p-mv__curve {
+  position: relative;
+  z-index: 4;
+  width: 125%;
+  height: 150px;
+  margin-top: -94px;
+  margin-left: -12%;
+  background-color: $color-main;
+  border-radius: 50% 50% 0 0 / 58% 58% 0 0;
+  transform: rotate(5deg);
+  transform-origin: center;
+}
+
+.p-about {
+  position: relative;
+  z-index: 5;
+  max-width: 1100px;
+  margin-inline: auto;
+  margin-top: -22px;
+  padding: 24px 16px;
+  border-radius: 12px;
+  background-color: $color-cream;
+}
+
+.p-about__inner {
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.p-about__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 24px;
+  color: $color-blue;
+  font-family: $font-serif;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.p-about__title span {
+  flex-shrink: 0;
+}
+
+.p-about__title-decoration {
+  width: min(27%, 170px);
+  height: auto;
+  object-fit: contain;
+}
+
+.p-about__body {
+  padding: 20px;
+  background-color: $color-white;
+  font-family: $font-serif;
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.p-about__body p {
+  margin: 0;
+}
+
+.p-about__body p + p {
+  margin-top: 2px;
+}
+
+.p-about__accent {
+  color: $color-red;
+}
+
+@include mq {
+  .p-top {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+  }
+
+  .p-top__contents {
+    padding: 0 clamp(34px, 4vw, 54px) 90px;
+  }
+
+  .p-mv__visual {
+    min-height: clamp(550px, 56vw, 670px);
+  }
+
+  .p-mv__background {
+    object-position: center 52%;
+  }
+
+  .p-mv__map {
+    top: 16px;
+    left: clamp(12px, 2vw, 30px);
+    width: clamp(300px, 32vw, 420px);
+  }
+
+  .p-mv__body {
+    top: 42px;
+    right: clamp(58px, 8vw, 120px);
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(24px, 3.5vw, 54px);
+  }
+
+  .p-mv__lead {
+    display: block;
+    margin: clamp(120px, 14vw, 170px) 0 0;
+    color: $color-white;
+    font-family: $font-serif;
+    font-size: clamp(1.2rem, 1.15vw, 1.7rem);
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.16em;
+    text-shadow: 0 2px 4px rgba($color-black, 0.55);
+    writing-mode: vertical-rl;
+  }
+
+  .p-mv__title {
+    width: clamp(240px, 25vw, 340px);
+  }
+
+  .p-mv__title img {
+    filter: drop-shadow(4px 5px 4px rgba($color-black, 0.44));
+  }
+
+  .p-mv__stamp {
+    right: clamp(-16px, 0vw, 4px);
+    bottom: 16px;
+    width: clamp(170px, 18vw, 230px);
+  }
+
+  .p-mv__curve {
+    width: 120%;
+    height: clamp(170px, 17vw, 210px);
+    margin-top: clamp(-130px, -11vw, -100px);
+    margin-left: -10%;
+    border-radius: 50% 50% 0 0 / 64% 64% 0 0;
+    transform: rotate(5deg);
+  }
+
+  .p-about {
+    margin-top: -38px;
+    padding: 36px 40px 42px;
+    border-radius: 14px;
+  }
+
+  .p-about__title {
+    gap: clamp(14px, 2vw, 28px);
+    margin-bottom: 30px;
+    font-size: clamp(2.2rem, 2.4vw, 3rem);
+  }
+
+  .p-about__title-decoration {
+    width: min(28%, 220px);
+  }
+
+  .p-about__body {
+    padding: 28px 42px;
+    font-size: clamp(1.4rem, 1.3vw, 1.7rem);
+    line-height: 2;
+  }
+}
