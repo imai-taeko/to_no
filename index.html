@@ -1,316 +1,463 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>遠野物語にふれる旅｜遠野 in 岩手観光協会</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="description"
-      content="岩手県遠野市の観光情報サイト。遠野物語ゆかりの観光スポット、食、買い物、アクセス情報をご紹介します。"
-    />
+  <title>遠野物語にふれる旅｜遠野 in 岩手観光協会</title>
 
-    <link rel="icon" href="./favicon.ico" />
+  <meta name="description" content="岩手県遠野市の観光情報サイト。遠野物語ゆかりの観光スポット、食、買い物、アクセス情報をご紹介します。" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="./favicon.ico" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <script src="./js/main.js" defer></script>
-  </head>
-
-  <body>
-    <header class="l-header">
-      <div class="l-header__inner">
-          <span class="l-header__site-name">
-      遠野 in 岩手観光協会
-    </span>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
 
 
-        <nav class="l-header__nav" aria-label="メインナビゲーション">
-          <ul class="l-header__nav-list">
-            <li class="l-header__nav-item">
-              <a href="#spot">
-                <img src="./img/menu_spot.webp" alt="観る" />
-              </a>
-            </li>
 
-            <li class="l-header__nav-item">
-              <a href="./story.html">
-                <img src="./img/menu_story.webp" alt="知る" />
-              </a>
-            </li>
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.css">
 
-            <li class="l-header__nav-item l-header__nav-item--eat">
-              <a href="./food.html">
-                <img src="./img/menu_eat.webp" alt="食べる・買う" />
-              </a>
-            </li>
+  <script src="./js/swiper-bundle.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
 
-            <li class="l-header__nav-item l-header__nav-item--access">
-              <a href="./access.html">
-                <img src="./img/menu_access.webp" alt="アクセス" />
-              </a>
-            </li>
-          </ul>
-        </nav>
 
-        <button
-          class="l-header__menu-button"
-          type="button"
-          aria-label="メニューを開く"
-          aria-controls="global-menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+</head>
 
-      <nav
-        id="global-menu"
-        class="l-header__drawer"
-        aria-label="スマートフォン用メニュー"
-      >
-        <ul class="l-header__drawer-list">
-          <li>
+<body>
+  <header class="l-header">
+    <div class="l-header__inner">
+      <span class="l-header__site-name">
+        遠野 in 岩手観光協会
+      </span>
+
+
+      <nav class="l-header__nav" aria-label="メインナビゲーション">
+        <ul class="l-header__nav-list">
+          <li class="l-header__nav-item">
             <a href="#spot">
               <img src="./img/menu_spot.webp" alt="観る" />
             </a>
           </li>
 
-          <li>
+          <li class="l-header__nav-item">
             <a href="./story.html">
               <img src="./img/menu_story.webp" alt="知る" />
             </a>
           </li>
 
-          <li>
+          <li class="l-header__nav-item l-header__nav-item--eat">
             <a href="./food.html">
               <img src="./img/menu_eat.webp" alt="食べる・買う" />
             </a>
           </li>
 
-          <li>
+          <li class="l-header__nav-item l-header__nav-item--access">
             <a href="./access.html">
               <img src="./img/menu_access.webp" alt="アクセス" />
             </a>
           </li>
         </ul>
       </nav>
-    </header>
 
-    <main class="p-top">
-      <section class="p-mv">
-        <div class="p-mv__visual">
-          <img
-            class="p-mv__background"
-            src="./img/mv_img.png"
-            alt="遠野盆地と山々の風景"
-          />
+      <button class="l-header__menu-button" type="button" aria-label="メニューを開く" aria-controls="global-menu"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
 
-          <div class="p-mv__map">
-            <img
-              src="./img/tono_map.webp"
-              alt="遠野市と周辺地域の地図"
-            />
-          </div>
+    <nav id="global-menu" class="l-header__drawer" aria-label="スマートフォン用メニュー">
+      <ul class="l-header__drawer-list">
+        <li>
+          <a href="#spot">
+            <img src="./img/menu_spot.webp" alt="観る" />
+          </a>
+        </li>
 
-          <div class="p-mv__body">
-            <p class="p-mv__lead">
-              岩手県遠野市。<br />
-              遠野盆地に囲まれた地に<br />
-              語り継がれる物語がある。<br />
-              東北の原風景の彼方へ<br />
-              見えない世界への扉を<br />
-              ひらいてみよう。
+        <li>
+          <a href="./story.html">
+            <img src="./img/menu_story.webp" alt="知る" />
+          </a>
+        </li>
+
+        <li>
+          <a href="./food.html">
+            <img src="./img/menu_eat.webp" alt="食べる・買う" />
+          </a>
+        </li>
+
+        <li>
+          <a href="./access.html">
+            <img src="./img/menu_access.webp" alt="アクセス" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="p-top">
+    <section class="p-mv">
+      <div class="p-mv__visual">
+        <img class="p-mv__background" src="./img/mv_img.png" alt="遠野盆地と山々の風景" />
+
+        <div class="p-mv__map">
+          <img src="./img/tono_map.webp" alt="遠野市と周辺地域の地図" />
+        </div>
+
+        <div class="p-mv__body">
+          <p class="p-mv__lead">
+            岩手県遠野市。<br />
+            遠野盆地に囲まれた地に<br />
+            語り継がれる物語がある。<br />
+            東北の原風景の彼方へ<br />
+            見えない世界への扉を<br />
+            ひらいてみよう。
+          </p>
+
+          <h1 class="p-mv__title">
+            <img src="./img/mv_logo.svg" alt="遠野物語にふれる旅" />
+          </h1>
+        </div>
+
+        <div class="p-mv__stamp">
+          <img src="./img/back_logo_top.webp" alt="遠野物語探訪" />
+        </div>
+      </div>
+
+      <div class="p-mv__curve">
+        <img src="./img/mv_wave.svg" alt="">
+      </div>
+    </section>
+
+    <div class="p-top__contents">
+      <section class="p-about">
+        <div class="p-about__inner">
+          <h2 class="p-about__title">
+            <img class="p-about__title-decoration p-about__title-decoration--left" src="./img/midasi_blue_left.webp"
+              alt="" />
+
+            <span>「遠野物語」とは？</span>
+
+            <img class="p-about__title-decoration p-about__title-decoration--right" src="./img/midasi_blue_right.webp"
+              alt="" />
+          </h2>
+
+          <div class="p-about__body">
+            <p>
+              　「遠野物語」は、遠野出身の佐々木喜善（ささききぜん）からの聞き書きを
+              もとに明治43年、柳田國男（やなぎたくにお）によって著作された地元の
+              民話集です。
             </p>
 
-            <h1 class="p-mv__title">
-              <img
-                src="./img/mv_logo.svg"
-                alt="遠野物語にふれる旅"
-              />
-            </h1>
-          </div>
+            <p>
+              　民俗学の先駆けといえるこの作品、創作とは違い、
+              <span class="p-about__accent">当時ほんとうにあった話</span>
+              として語り継がれている出来事を編集したものになります。
+            </p>
 
-          <div class="p-mv__stamp">
-            <img
-              src="./img/back_logo_top.webp"
-              alt="遠野物語探訪"
-            />
+            <p>
+              　当時の風習、文化を知る貴重な手がかりとともに、中には不思議な話が
+              いくつも見られるのが特徴です。
+            </p>
+
+            <p>
+              <span class="p-about__accent">
+                　座敷わらし、河童、オシラサマ
+              </span>
+              ・・・・今なお遠野市のあちこちに、彼らの存在を感じ取れる場所が
+              残っています。
+            </p>
           </div>
         </div>
-
-        <div class="p-mv__curve">
-  <img src="./img/mv_wave.svg" alt="">
-</div>
       </section>
 
-      <div class="p-top__contents">
-        <section class="p-about">
-          <div class="p-about__inner">
-            <h2 class="p-about__title">
-              <img
-                class="p-about__title-decoration p-about__title-decoration--left"
-                src="./img/midasi_blue_left.webp"
-                alt=""
-              />
 
-              <span>「遠野物語」とは？</span>
 
-              <img
-                class="p-about__title-decoration p-about__title-decoration--right"
-                src="./img/midasi_blue_right.webp"
-                alt=""
-              />
-            </h2>
+      <section class="p-event">
+        <div class="p-event__inner">
+          <h2 class="p-event__title">
+            <img class="p-event__title-decoration p-event__title-decoration--left" src="./img/midasi_red_left.webp"
+              alt="">
 
-            <div class="p-about__body">
-              <p>
-                　「遠野物語」は、遠野出身の佐々木喜善（ささききぜん）からの聞き書きを
-                もとに明治43年、柳田國男（やなぎたくにお）によって著作された地元の
-                民話集です。
-              </p>
+            <span class="p-event__title-text">イベント情報</span>
 
-              <p>
-                　民俗学の先駆けといえるこの作品、創作とは違い、
-                <span class="p-about__accent">当時ほんとうにあった話</span>
-                として語り継がれている出来事を編集したものになります。
-              </p>
+            <img class="p-event__title-decoration p-event__title-decoration--right" src="./img/midasi_red_right.webp"
+              alt="">
+          </h2>
 
-              <p>
-                　当時の風習、文化を知る貴重な手がかりとともに、中には不思議な話が
-                いくつも見られるのが特徴です。
-              </p>
 
-              <p>
-                <span class="p-about__accent">
-                  　座敷わらし、河童、オシラサマ
-                </span>
-                ・・・・今なお遠野市のあちこちに、彼らの存在を感じ取れる場所が
-                残っています。
-              </p>
+          <div class="p-event__slider-wrap">
+            <div class="p-event__slider swiper">
+              <div class="p-event__list swiper-wrapper">
+
+                <article class="p-event__item swiper-slide">
+                  <a class="p-event__link" href="#">
+                    <div class="p-event__image">
+                      <img src="./img/bn_001.png" alt="ふしぎなオシラサマ語りのイベント" width="600" height="360">
+                    </div>
+
+                    <div class="p-event__body">
+                      <time class="p-event__date" datetime="2024-06-01">
+                        2024.6.1
+                      </time>
+
+                      <p class="p-event__text">
+                        2024年6月1日（土）〜9月30日（月）、伝承園にて「ふしぎなオシラサマ語り」を開催します。
+                      </p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="p-event__item swiper-slide">
+                  <a class="p-event__link" href="#">
+                    <div class="p-event__image">
+                      <img src="./img/bn_002.png" alt="遠野市デジタルスタンプラリーのイベント" width="600" height="360">
+                    </div>
+
+                    <div class="p-event__body">
+                      <time class="p-event__date" datetime="2024-07-04">
+                        2024.7.4
+                      </time>
+
+                      <p class="p-event__text">
+                        2024年7月4日（木）〜8月3日（土）の期間で、遠野市デジタルスタンプラリーを開催予定です。
+                      </p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="p-event__item swiper-slide">
+                  <a class="p-event__link" href="#">
+                    <div class="p-event__image">
+                      <img src="./img/bn_003.png" alt="馬っこつなぎのイベント" width="600" height="360">
+                    </div>
+
+                    <div class="p-event__body">
+                      <time class="p-event__date" datetime="2024-05-01">
+                        2024.5.1
+                      </time>
+
+                      <p class="p-event__text">
+                        2024年5月1日（水）〜郷土村にて、伝統行事「馬っこつなぎ」のイベントを開催します。
+                      </p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="p-event__item swiper-slide">
+                  <a class="p-event__link" href="#">
+                    <div class="p-event__image">
+                      <img src="./img/bn_004.png" alt="ふしぎなオシラサマ語りのイベント" width="600" height="360">
+                    </div>
+
+                    <div class="p-event__body">
+                      <time class="p-event__date" datetime="2024-06-01">
+                        2024.6.1
+                      </time>
+
+                      <p class="p-event__text">
+                        2024年6月1日（土）〜9月30日（月）、伝承園にて「ふしぎなオシラサマ語り」を開催します。
+                      </p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="p-event__item swiper-slide">
+                  <a class="p-event__link" href="#">
+                    <div class="p-event__image">
+                      <img src="./img/bn_005.png" alt="遠野市デジタルスタンプラリーのイベント" width="600" height="360">
+                    </div>
+
+                    <div class="p-event__body">
+                      <time class="p-event__date" datetime="2024-07-04">
+                        2024.7.4
+                      </time>
+
+                      <p class="p-event__text">
+                        2024年7月4日（木）〜8月3日（土）の期間で、遠野市デジタルスタンプラリーを開催予定です。
+                      </p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="p-event__item swiper-slide">
+                  <a class="p-event__link" href="#">
+                    <div class="p-event__image">
+                      <img src="./img/bn_006.png" alt="馬っこつなぎのイベント" width="600" height="360">
+                    </div>
+
+                    <div class="p-event__body">
+                      <time class="p-event__date" datetime="2024-05-01">
+                        2024.5.1
+                      </time>
+
+                      <p class="p-event__text">
+                        2024年5月1日（水）〜郷土村にて、伝統行事「馬っこつなぎ」のイベントを開催します。
+                      </p>
+                    </div>
+                  </a>
+                </article>
+
+              </div>
+
+              
             </div>
+            <button class="p-event__button p-event__button--prev swiper-button-prev" type="button"
+                aria-label="前のイベントを見る"></button>
+
+              <button class="p-event__button p-event__button--next swiper-button-next" type="button"
+                aria-label="次のイベントを見る"></button>
           </div>
-        </section>
+        </div>
+      </section>
 
 
+      <section class="p-spot">
+  <div class="p-spot__inner l-container">
 
-<section class="p-event">
-  <div class="p-event__inner">
-    <h2 class="p-event__title">
-      <span class="p-event__title-decoration" aria-hidden="true"></span>
+    <h2 class="p-spot__title">
+      <img
+        class="p-spot__title-decoration"
+        src="./img/midasi_leef.webp"
+        alt=""
+        width="88"
+        height="105"
+      >
 
-      <span class="p-event__title-text">イベント情報</span>
+      <img
+        class="p-spot__title-logo"
+        src="./img/menu_spot.webp"
+        alt="観る spot"
+        width="97"
+        height="43"
+      >
 
-      <span class="p-event__title-decoration" aria-hidden="true"></span>
+      <span class="p-spot__title-sub">-spot-</span>
     </h2>
 
-    <div class="p-event__slider-wrap">
-      <div class="p-event__slider swiper">
-        <div class="p-event__list swiper-wrapper">
+    <div class="p-spot__list">
 
-          <article class="p-event__item swiper-slide">
-            <a class="p-event__link" href="#">
-              <div class="p-event__image">
-                <img
-                  src="./img/bn_001.png"
-                  alt="ふしぎなオシラサマ語りのイベント"
-                  width="600"
-                  height="360"
-                >
-              </div>
+      <article class="p-spot__item">
+        <div class="p-spot__body">
+          <p class="p-spot__text">
+            遠野の歴史、文化を知るには、外せない博物館。<br>
+            広い館内では、書籍資料だけでなく映像ギャラリーも充実。<br>
+            プロジェクションマッピングを駆使した、展示様式の美しさも見どころです。
+          </p>
 
-              <div class="p-event__body">
-                <time class="p-event__date" datetime="2024-06-01">
-                  2024.6.1
-                </time>
-
-                <p class="p-event__text">
-                  2024年6月1日（土）〜9月30日（月）、伝承園にて「ふしぎなオシラサマ語り」を開催します。
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <article class="p-event__item swiper-slide">
-            <a class="p-event__link" href="#">
-              <div class="p-event__image">
-                <img
-                  src="./img/bn_002.png"
-                  alt="遠野市デジタルスタンプラリーのイベント"
-                  width="600"
-                  height="360"
-                >
-              </div>
-
-              <div class="p-event__body">
-                <time class="p-event__date" datetime="2024-07-04">
-                  2024.7.4
-                </time>
-
-                <p class="p-event__text">
-                  2024年7月4日（木）〜8月3日（土）の期間で、遠野市デジタルスタンプラリーを開催予定です。
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <article class="p-event__item swiper-slide">
-            <a class="p-event__link" href="#">
-              <div class="p-event__image">
-                <img
-                  src="./img/bn_003.png"
-                  alt="馬っこつなぎのイベント"
-                  width="600"
-                  height="360"
-                >
-              </div>
-
-              <div class="p-event__body">
-                <time class="p-event__date" datetime="2024-05-01">
-                  2024.5.1
-                </time>
-
-                <p class="p-event__text">
-                  2024年5月1日（水）〜郷土村にて、伝統行事「馬っこつなぎ」のイベントを開催します。
-                </p>
-              </div>
-            </a>
-          </article>
-
+          <p class="p-spot__address">
+            住所：岩手県遠野市○○番地２丁目
+          </p>
         </div>
 
-        <button
-          class="p-event__button p-event__button--prev swiper-button-prev"
-          type="button"
-          aria-label="前のイベントを見る"
-        ></button>
+        <figure class="p-spot__figure">
+          <img
+            class="p-spot__image"
+            src="./img/spot_museum.png"
+            alt="遠野市立博物館の外観"
+          >
 
-        <button
-          class="p-event__button p-event__button--next swiper-button-next"
-          type="button"
-          aria-label="次のイベントを見る"
-        ></button>
-      </div>
+          <figcaption class="p-spot__name">
+            TONO 市立博物館
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="p-spot__item">
+        <div class="p-spot__body">
+          <p class="p-spot__text">
+            曲がり家の中、囲炉裏をかこみながら、現役の語り部から直接民話を聞くことができます。<br>
+            遠野物語に編集されていない、ここでしか聞くことができないお話も多数あり。
+          </p>
+
+          <p class="p-spot__address">
+            住所：岩手県遠野市○○番地２丁目<br>
+            ※語り部のスケジュールは不定期です。要確認。
+          </p>
+        </div>
+
+        <figure class="p-spot__figure">
+          <img
+            class="p-spot__image"
+            src="./img/spot_minsho.png"
+            alt="伝承園の入口"
+          >
+
+          <figcaption class="p-spot__name">
+            　伝承園
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="p-spot__item">
+        <div class="p-spot__body">
+          <p class="p-spot__text">
+            河童と淵神伝説で有名な河原。<br>
+            現在は浅瀬で川面は澄んでいるが、かつては底を見通せないほど深かったという。<br>
+            伝承では恐ろしさを感じるが、迎えてくれる河童の石像は意外にも愛嬌がある。
+          </p>
+
+          <p class="p-spot__address">
+            住所：岩手県遠野市○○番地２丁目
+          </p>
+        </div>
+
+        <figure class="p-spot__figure">
+          <img
+            class="p-spot__image"
+            src="./img/spot_kappa.png"
+            alt="かっぱ淵の川辺"
+          >
+
+          <figcaption class="p-spot__name">
+            かっぱ淵
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="p-spot__item">
+        <div class="p-spot__body">
+          <p class="p-spot__text">
+            馬と人間が同じ建物で暮らしていた伝統住居、曲がり家。<br>
+            当時のままの建物を移築し、村を形成。<br>
+            実際に馬やにわとりを飼育しており、水田も有り。懐かしい原風景をゆったりと堪能できる。
+          </p>
+
+          <p class="p-spot__address">
+            住所：岩手県遠野市○○番地２丁目
+          </p>
+        </div>
+
+        <figure class="p-spot__figure">
+          <img
+            class="p-spot__image"
+            src="./img/spot_kyoudo.png"
+            alt="遠野郷土村の茅葺き屋根の建物"
+          >
+
+          <figcaption class="p-spot__name">
+            　遠野郷土村
+          </figcaption>
+        </figure>
+      </article>
+
     </div>
   </div>
 </section>
 
 
 
-      </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>

@@ -303,73 +303,128 @@ top: -20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 28px;
+
   margin: 0;
   padding: 0 20px 26px;
+
   color: #c83e46;
+}
+
+.p-event__title-text {
+  display: inline-block;
+
   font-family: "Kiwi Maru", serif;
-  font-size: 2.2rem;
+  font-size: 2.7rem;
   font-weight: 400;
+  line-height: 1;
   letter-spacing: 0.12em;
+
+  transform: scaleY(0.88);
+  transform-origin: center;
 }
 
 .p-event__title-decoration {
   display: block;
-  width: min(180px, 24%);
-  height: 30px;
+  width: min(220px, 24%);
+  height: auto;
+  flex-shrink: 1;
+}
+
+.p-event__title-decoration--left,
+.p-event__title-decoration--right {
+  object-fit: contain;
 }
 
 .p-event__slider-wrap {
-  width: calc(100% - 48px);
-  max-width: 1120px;
-  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+// バナー画像の背面に敷く水色帯
+.p-event__slider-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 286px;
+
+  background-color: #a9d8ef;
 }
 
 .p-event__slider {
   position: relative;
+  z-index: 1;
+
+  width: 100%;
   overflow: hidden;
-  background-color: #a9d8ef;
+
+  background-color: transparent;
 }
 
+
+
 .p-event__list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  position: relative;
+  z-index: 1;
+
 }
 
 .p-event__item {
-  min-width: 0;
+  width: 324px;
+  min-width: 324px;
+  flex-shrink: 0;
 }
 
 .p-event__link {
   display: flex;
   flex-direction: column;
   height: 100%;
+
   color: inherit;
   text-decoration: none;
 }
 
 .p-event__image {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 286px;
   padding: 18px 12px;
 }
 
 .p-event__image img {
   display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 5 / 3;
+  width: 300px;
+  max-width: none;
+  height: 250px;
+  flex-shrink: 0;
+
   object-fit: cover;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
 }
 
 .p-event__body {
   flex-grow: 1;
-  padding: 14px 16px 20px;
+
+  width: calc(100% - 28px);
+  margin: 10px auto 0;
+
+  padding: 14px 0 20px;
+
   background-color: #fff;
 }
 
 .p-event__date {
   display: block;
   margin-bottom: 8px;
+
   color: #273a62;
   font-size: 1.7rem;
   font-weight: 700;
@@ -378,6 +433,7 @@ top: -20px;
 
 .p-event__text {
   margin: 0;
+
   color: #111;
   font-size: 1.35rem;
   font-weight: 500;
@@ -386,12 +442,14 @@ top: -20px;
 
 .p-event__button {
   position: absolute;
-  top: 50%;
+  top: 143px;
   z-index: 5;
+
   width: 44px;
   height: 54px;
   padding: 0;
   border: 0;
+
   background: transparent;
   transform: translateY(-50%);
   cursor: pointer;
@@ -402,18 +460,13 @@ top: -20px;
   content: "";
   position: absolute;
   top: 50%;
+
   width: 18px;
   height: 2px;
+
   background-color: #273a62;
 }
 
-.p-event__button--prev {
-  left: 0;
-}
-
-.p-event__button--next {
-  right: 0;
-}
 
 .p-event__button--prev::before,
 .p-event__button--prev::after {
@@ -441,4 +494,26 @@ top: -20px;
 
 .p-event__button--next::after {
   transform: rotate(-40deg);
+}
+
+.p-event__button--prev {
+  right: auto;
+  left: calc(50% - 548px);
+}
+
+.p-event__button--next {
+  right: calc(50% - 548px);
+  left: auto;
+}
+
+.p-event__button > svg {
+  display: none;
+}
+
+@media screen and (min-width: 1128px) {
+  .p-event__slider {
+    width: 1008px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

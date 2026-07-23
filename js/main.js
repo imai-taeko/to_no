@@ -33,3 +33,24 @@ if (menuButton && drawerMenu) {
     }
   });
 }
+
+const eventSwiper = new Swiper(".p-event__slider", {
+  loop: true,
+  speed: 600,
+
+  slidesPerView: "auto",
+  spaceBetween: 18,
+  centeredSlides: true,
+
+  navigation: {
+    nextEl: ".p-event__button--next",
+    prevEl: ".p-event__button--prev",
+  },
+
+  breakpoints: {
+    1128: {
+      slidesPerView: 3,
+      centeredSlides: false,
+    },
+  },
+});

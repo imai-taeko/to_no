@@ -1,0 +1,251 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+// ======================================
+// Spot
+// ======================================
+
+.p-spot {
+  position: relative;
+  z-index: 5;
+
+  max-width: 1100px;
+  margin-inline: auto;
+  margin-top: 38px;
+
+  padding: 24px 16px;
+
+  border-radius: 12px;
+  background-color: $color-cream;
+
+  box-shadow:
+    0 -2px 6px rgba(255, 255, 255, 0.55),
+    0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.p-spot__inner {
+  padding: 0;
+}
+
+.p-spot__title {
+  display: flex;
+  align-items: center;
+
+  min-height: 66px;
+  margin: 0 0 14px;
+}
+
+.p-spot__title-decoration {
+  display: block;
+  width: 44px;
+  height: auto;
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+.p-spot__title-logo {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin-left: -4px;
+  margin-top: 12px;
+
+  object-fit: contain;
+}
+
+.p-spot__title-sub {
+  margin-top: 8px;
+  margin-left: 6px;
+
+  color: $color-blue;
+  font-family: "Kiwi Maru", serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.p-spot__list {
+  display: grid;
+  gap: 20px;
+}
+
+.p-spot__item {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 14px;
+
+  background-color: $color-white;
+}
+
+.p-spot__body {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+
+  padding: 16px 4px 2px;
+}
+
+.p-spot__text {
+  margin: 0;
+
+  color: $color-black;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.p-spot__text br {
+  display: none;
+}
+
+.p-spot__address {
+  margin: 18px 0 0;
+
+  color: #273a62;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.p-spot__figure {
+  order: 1;
+
+  width: 100%;
+  margin: 0;
+}
+
+.p-spot__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+
+  object-fit: cover;
+
+  box-shadow: 3px 4px 6px rgba($color-black, 0.28);
+}
+
+.p-spot__name {
+  margin-top: 8px;
+
+  color: #b94b36;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@include mq {
+  .p-spot {
+    margin-top: 54px;
+    padding: 36px 40px 42px;
+    border-radius: 8px;
+
+    box-shadow:
+      0 -3px 10px rgba(255, 255, 255, 0.65),
+      0 8px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .p-spot__inner {
+    padding: 28px 46px 38px;
+  }
+
+  .p-spot__title {
+    min-height: 76px;
+    margin-bottom: 18px;
+  }
+
+  .p-spot__title-decoration {
+    width: 58px;
+  }
+
+  .p-spot__title-logo {
+    width: 100px;
+    margin-left: -6px;
+    margin-top: 12px;
+  }
+
+.p-spot__title-sub {
+    margin-top: 8px;
+    margin-left: 8px;
+    font-size: 2.8rem;
+}
+
+  .p-spot__list {
+    gap: 48px;
+  }
+
+  .p-spot__item {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(240px, 1fr);
+    align-items: center;
+    column-gap: 34px;
+
+    min-height: 230px;
+    padding: 0 24px;
+  }
+
+  .p-spot__body {
+    order: initial;
+    padding: 24px 10px;
+
+    transform: translateY(-24px);
+  }
+
+  .p-spot__text {
+    font-size: clamp(1.3rem, 1.15vw, 1.5rem);
+    line-height: 1.8;
+  }
+
+  .p-spot__text br {
+    display: initial;
+  }
+
+  .p-spot__address {
+    margin-top: 20px;
+    font-size: clamp(1.2rem, 1vw, 1.4rem);
+  }
+
+  .p-spot__figure {
+    order: initial;
+    width: 100%;
+
+    transform: translateY(-24px);
+  }
+
+ .p-spot__image {
+  width: 106%;
+  max-width: none;
+  aspect-ratio: 3 / 2;
+
+  margin-left: 0;
+}
+
+.p-spot__item:nth-child(odd) .p-spot__image {
+  margin-left: -6%;
+}
+
+  .p-spot__name {
+    font-size: 1.7rem;
+  }
+
+  .p-spot__item:nth-child(even) {
+    grid-template-columns: minmax(240px, 1fr) minmax(0, 1.35fr);
+  }
+
+  .p-spot__item:nth-child(even) .p-spot__figure {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .p-spot__item:nth-child(even) .p-spot__body {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
