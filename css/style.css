@@ -551,6 +551,8 @@ address {
   width: auto;
   height: 100%;
   max-width: none;
+  transform: scale(1.18);
+  transform-origin: left top;
   filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.28));
 }
 
@@ -696,6 +698,10 @@ address {
     bottom: clamp(180px, 15vw, 230px);
     left: clamp(0px, 1.5vw, 24px);
     width: auto;
+  }
+  .p-mv__map img {
+    transform: scale(1.22);
+    transform-origin: left top;
   }
   .p-mv__body {
     top: 42px;
