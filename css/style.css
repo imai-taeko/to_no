@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -1166,5 +1167,394 @@ address {
   .p-spot__item:nth-child(even) .p-spot__body {
     grid-column: 2;
     grid-row: 1;
+  }
+}
+.p-story {
+  width: 100%;
+  padding: 24px 14px 64px;
+  background-color: #344766;
+}
+
+.p-story__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.p-story__list {
+  display: grid;
+  gap: 54px;
+}
+
+.p-story__item {
+  position: relative;
+  padding: 18px 16px 16px;
+  border-radius: 12px;
+  background-color: #fbf6c6;
+  box-shadow: 0 -2px 6px rgba(255, 255, 255, 0.45), 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.p-story__header {
+  margin-bottom: 24px;
+}
+
+.p-story__title {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  margin: 0;
+}
+
+.p-story__title-decoration {
+  display: block;
+  width: 44px;
+  height: auto;
+  flex-shrink: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.p-story__title-logo {
+  display: block;
+  width: 75px;
+  height: auto;
+  margin-left: -4px;
+  margin-top: 12px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.p-story__title-sub {
+  margin-top: 7px;
+  margin-left: 6px;
+  color: #061d8b;
+  font-family: "Kiwi Maru", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.p-story__card {
+  position: relative;
+  padding: 118px 18px 26px;
+  background-color: #fff;
+}
+
+.p-story__figure {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  z-index: 2;
+  width: calc(100% - 54px);
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+.p-story__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.24);
+}
+
+.p-story__quote {
+  position: absolute;
+  z-index: 3;
+  inline-size: 72%;
+  block-size: auto;
+  margin: 0;
+  color: #fff;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space: normal;
+  overflow-wrap: normal;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.p-story__quote--warashi {
+  top: 16%;
+  left: 10%;
+}
+
+.p-story__quote--kappa {
+  top: 14%;
+  left: 7%;
+}
+
+.p-story__quote--mayoiga {
+  top: 14%;
+  right: 7%;
+}
+
+.p-story__quote--osirasama-left {
+  top: 13%;
+  left: 7%;
+}
+
+.p-story__quote--osirasama-right {
+  top: 13%;
+  right: 7%;
+}
+
+.p-story__body {
+  padding-top: 18px;
+}
+
+.p-story__name {
+  margin: 0 0 14px;
+  color: #b94b36;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.p-story__name::before {
+  content: "・";
+}
+
+.p-story__reading {
+  font-size: 0.72em;
+  font-weight: 500;
+}
+
+.p-story__text {
+  margin: 0;
+  color: #000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+.p-story__text br {
+  display: initial;
+}
+
+.p-story__card--warashi {
+  display: flex;
+  flex-direction: column;
+  padding-top: 18px;
+}
+
+.p-story__lead {
+  order: 1;
+  color: #000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.p-story__card--warashi .p-story__figure {
+  position: relative;
+  top: auto;
+  left: auto;
+  order: 2;
+  width: 100%;
+  margin-top: 20px;
+  transform: none;
+}
+
+.p-story__card--warashi .p-story__body {
+  order: 3;
+}
+
+.p-story__item--kappa,
+.p-story__item--mayoiga,
+.p-story__item--osirasama {
+  padding-top: 58px;
+}
+
+.p-story__item--kappa .p-story__card,
+.p-story__item--mayoiga .p-story__card,
+.p-story__item--osirasama .p-story__card {
+  padding-top: 0;
+}
+
+.p-story__item--kappa .p-story__figure,
+.p-story__item--mayoiga .p-story__figure,
+.p-story__item--osirasama .p-story__figure {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: calc(100% - 22px);
+  margin: 0 auto -30px;
+  transform: translateY(-30px);
+}
+
+.p-story__item--kappa .p-story__body,
+.p-story__item--mayoiga .p-story__body,
+.p-story__item--osirasama .p-story__body {
+  padding-top: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .p-story {
+    padding: 28px clamp(26px, 3vw, 42px) 90px;
+  }
+  .p-story__list {
+    gap: 76px;
+  }
+  .p-story__item {
+    padding: 22px 42px 32px;
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(255, 255, 255, 0.55), 0 8px 18px rgba(0, 0, 0, 0.15);
+  }
+  .p-story__header {
+    margin-bottom: 20px;
+  }
+  .p-story__title {
+    min-height: 64px;
+  }
+  .p-story__title-decoration {
+    width: 58px;
+  }
+  .p-story__title-logo {
+    width: 75px;
+    margin-top: 12px;
+    margin-left: -6px;
+  }
+  .p-story__title-sub {
+    margin-top: 8px;
+    margin-left: 7px;
+    font-size: 2rem;
+  }
+  .p-story__card {
+    min-height: 480px;
+    padding: 324px 44px 44px;
+  }
+  .p-story__figure {
+    top: -56px;
+    width: min(68%, 620px);
+  }
+  .p-story__quote {
+    inline-size: 76%;
+    font-size: 1.5rem;
+    line-height: 1.85;
+    letter-spacing: 0.1em;
+  }
+  .p-story__quote--warashi {
+    inline-size: 65%;
+    font-size: 1.7rem;
+    top: 18%;
+    left: 11%;
+  }
+  .p-story__quote--kappa {
+    inline-size: 68%;
+    top: 14%;
+    left: 7%;
+  }
+  .p-story__quote--mayoiga {
+    inline-size: 68%;
+    top: 14%;
+    right: 8%;
+  }
+  .p-story__quote--osirasama-left {
+    inline-size: 65%;
+    top: 13%;
+    left: 14%;
+  }
+  .p-story__quote--osirasama-right {
+    inline-size: 65%;
+    top: 13%;
+    right: 14%;
+  }
+  .p-story__body {
+    padding-top: 0;
+  }
+  .p-story__name {
+    margin-bottom: 14px;
+    font-size: clamp(1.8rem, 1.6vw, 2.2rem);
+  }
+  .p-story__text {
+    font-size: clamp(1.3rem, 1.05vw, 1.5rem);
+    line-height: 1.9;
+  }
+  .p-story__text br {
+    display: initial;
+  }
+  .p-story__item--warashi {
+    padding-top: 12px;
+  }
+  .p-story__card--warashi {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.62fr) minmax(440px, 1.7fr);
+    grid-template-rows: auto auto;
+    -moz-column-gap: 26px;
+         column-gap: 26px;
+    min-height: 0;
+    padding: 0 44px 44px;
+  }
+  .p-story__lead {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    padding-top: 26px;
+    font-size: clamp(1.35rem, 1.15vw, 1.6rem);
+    line-height: 2;
+  }
+  .p-story__card--warashi .p-story__figure {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 2;
+    grid-row: 1;
+    width: calc(100% + 34px);
+    margin: -64px -34px 0 0;
+    transform: none;
+  }
+  .p-story__card--warashi .p-story__body {
+    grid-column: 1/-1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 860px;
+    margin-inline: auto;
+    padding-top: 28px;
+  }
+  .p-story__item--kappa,
+  .p-story__item--mayoiga,
+  .p-story__item--osirasama {
+    padding-top: 92px;
+  }
+  .p-story__item--kappa .p-story__card,
+  .p-story__item--mayoiga .p-story__card,
+  .p-story__item--osirasama .p-story__card {
+    padding-top: 0;
+  }
+  .p-story__item--kappa .p-story__figure,
+  .p-story__item--mayoiga .p-story__figure,
+  .p-story__item--osirasama .p-story__figure {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(68%, 620px);
+    margin: 0 auto -56px;
+    transform: translateY(-56px);
+  }
+  .p-story__item--kappa .p-story__body,
+  .p-story__item--mayoiga .p-story__body,
+  .p-story__item--osirasama .p-story__body {
+    width: 100%;
+    max-width: 860px;
+    margin-inline: auto;
+    padding-top: 34px;
+  }
+  .p-story__item--kappa .p-story__body,
+  .p-story__item--mayoiga .p-story__body,
+  .p-story__item--osirasama .p-story__body {
+    width: 100%;
+    max-width: 860px;
+    margin-inline: auto;
   }
 }
