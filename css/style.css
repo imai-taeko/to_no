@@ -163,11 +163,11 @@ address {
 }
 
 .l-header__site-name {
-  margin-left: auto;
-  margin-right: 12px;
   display: flex;
   align-items: center;
   gap: 4px;
+  margin-right: 12px;
+  margin-left: auto;
   color: #ae3944;
   font-family: "Kiwi Maru", serif;
   font-size: 1.5rem;
@@ -198,6 +198,7 @@ address {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   padding: 8px;
   border: 0;
   background-color: transparent;
@@ -228,6 +229,7 @@ address {
 .l-header__drawer {
   display: grid;
   grid-template-rows: 0fr;
+  overflow: hidden;
   background-color: #fbf6c6;
   transition: grid-template-rows 0.3s ease;
 }
@@ -237,49 +239,57 @@ address {
 }
 
 .l-header__drawer-list {
-  display: grid;
   min-height: 0;
-  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0 20px 18px;
   overflow: hidden;
+  list-style: none;
 }
 
 .l-header__drawer-list li {
-  border-top: 1px solid rgba(6, 29, 139, 0.16);
-}
-
-.l-header__drawer-list li:nth-child(odd) {
-  border-right: 1px solid rgba(6, 29, 139, 0.16);
+  border-bottom: 1px solid rgba(6, 29, 139, 0.18);
 }
 
 .l-header__drawer-list a {
+  position: relative;
   display: flex;
-  min-height: 72px;
+  min-height: 58px;
   align-items: center;
-  justify-content: center;
-  padding: 12px 16px;
+  padding: 12px 34px 12px 8px;
+  color: #061d8b;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-decoration: none;
 }
 
-.l-header__drawer-list img {
-  width: auto;
-  max-width: 92px;
-  max-height: 38px;
-  -o-object-fit: contain;
-     object-fit: contain;
+.l-header__drawer-list a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 @media screen and (min-width: 768px) {
   .l-header__inner {
     min-height: 78px;
-    padding-inline: clamp(32px, 5vw, 72px);
     justify-content: flex-end;
     gap: 32px;
+    padding-inline: clamp(32px, 5vw, 72px);
   }
   .l-header__site-name {
-    flex-shrink: 0;
-    margin: 0;
     display: flex;
     align-items: center;
     gap: 4px;
+    flex-shrink: 0;
+    margin: 0;
     color: #ae3944;
     font-family: "Kiwi Maru", serif;
     font-size: 1.7rem;
@@ -318,6 +328,11 @@ address {
     min-height: 78px;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .l-header__nav-item a:hover {
+    opacity: 0.92;
+    transform: translateY(-2px);
   }
   .l-header__nav-item img {
     width: auto;
@@ -335,13 +350,6 @@ address {
   .l-header__menu-button,
   .l-header__drawer {
     display: none;
-  }
-  .l-header__nav-item a {
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
-  .l-header__nav-item a:hover {
-    opacity: 0.92;
-    transform: translateY(-2px);
   }
 }
 .l-footer {
@@ -779,7 +787,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: clamp(12px, 3vw, 28px);
   margin: 0;
   padding: 0 20px 26px;
   color: #c83e46;
@@ -787,11 +795,13 @@ address {
 
 .p-event__title-text {
   display: inline-block;
+  flex-shrink: 0;
   font-family: "Kiwi Maru", serif;
-  font-size: 2.7rem;
+  font-size: clamp(1.9rem, 6vw, 2.7rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.12em;
+  white-space: nowrap;
   transform: scaleY(0.88);
   transform-origin: center;
 }
