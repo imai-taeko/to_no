@@ -2,5 +2,451 @@
 @use "../foundation/mixin" as *;
 
 // ======================================
-// Food Page
+// Food
 // ======================================
+
+.p-food {
+  width: 100%;
+  padding: 24px 14px 72px;
+  overflow: hidden;
+  background-color: $color-main;
+}
+
+.p-food__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.p-food__section + .p-food__section {
+  margin-top: 32px;
+}
+
+.p-food__section {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 16px 20px;
+  border-radius: 12px;
+  background-color: $color-cream;
+  box-shadow:
+    0 -2px 6px rgba(255, 255, 255, 0.45),
+    0 5px 12px rgba($color-black, 0.12);
+}
+
+.p-food__section--shop {
+  background-color: #d7eaf7;
+}
+
+.p-food__header {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 20px;
+}
+
+.p-food__title {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  margin: 0;
+}
+
+.p-food__title-decoration {
+  display: block;
+  width: 44px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.p-food__title-logo {
+  display: block;
+  width: auto;
+  max-width: 120px;
+height: 46px;
+  margin-top: 10px;
+  margin-left: -3px;
+  object-fit: contain;
+}
+
+.p-food__section--shop .p-food__title-logo {
+  max-width: 96px;
+}
+
+.p-food__title-sub {
+  margin-top: 14px;
+  margin-left: 7px;
+  color: $color-blue;
+  font-family: "Kiwi Maru", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.p-food__panel {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  padding: 18px 18px 44px;
+}
+
+.p-food__background-logo {
+  position: absolute;
+  top: -12px;
+  right: -92px;
+  z-index: 0;
+  display: block;
+  width: 230px;
+  height: auto;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.p-food__products {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 34px;
+}
+
+.p-food__product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-food__figure {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.p-food__image-background {
+  position: relative;
+  display: flex;
+  min-height: 250px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  isolation: isolate;
+}
+
+.p-food__image-background::before,
+.p-food__image-background::after {
+  position: absolute;
+  z-index: -1;
+  background-color: $color-white;
+  content: "";
+  pointer-events: none;
+}
+
+.p-food__image-background::before {
+  inset: 3% 10%;
+  border-radius:
+    42% 58% 36% 64% /
+    57% 38% 62% 43%;
+  transform: rotate(-3deg);
+}
+
+.p-food__image-background::after {
+  top: 14%;
+  right: 8%;
+  bottom: 10%;
+  left: 12%;
+  border-radius:
+    61% 39% 57% 43% /
+    37% 63% 41% 59%;
+  transform: rotate(4deg);
+}
+
+.p-food__product--reverse .p-food__image-background::before {
+  inset: 3% 5% 6% 1%;
+  border-radius:
+    57% 43% 63% 37% /
+    42% 61% 39% 58%;
+  transform: rotate(3deg);
+}
+
+.p-food__product--reverse .p-food__image-background::after {
+  top: 12%;
+  right: 7%;
+  bottom: 17%;
+  left: -2%;
+  border-radius:
+    38% 62% 44% 56% /
+    64% 36% 58% 42%;
+  transform: rotate(-5deg);
+}
+
+.p-food__image {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  max-height: 250px;
+  height: auto;
+  object-fit: contain;
+  filter:
+  drop-shadow(0 4px 4px rgba(0,0,0,.10))
+  drop-shadow(0 10px 12px rgba(0,0,0,.12));
+}
+
+.p-food__body {
+  position: relative;
+  z-index: 2;
+  margin-top: 12px;
+}
+
+.p-food__name {
+  position: relative;
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  margin: 0 0 16px;
+  padding-left: 24px;
+  isolation: isolate;
+  transform-origin: left center;
+}
+
+.p-food__section--eat .p-food__product:nth-child(1) .p-food__name {
+  transform: rotate(-1.4deg);
+}
+
+.p-food__section--eat .p-food__product:nth-child(2) .p-food__name {
+  transform: rotate(2.4deg);
+}
+
+.p-food__section--eat .p-food__product:nth-child(3) .p-food__name {
+  transform: rotate(-0.8deg);
+}
+
+.p-food__section--eat .p-food__product:nth-child(4) .p-food__name {
+  transform: rotate(1.5deg);
+}
+
+.p-food__section--shop .p-food__product:nth-child(1) .p-food__name {
+  transform: rotate(-1.1deg);
+}
+
+.p-food__section--shop .p-food__product:nth-child(2) .p-food__name {
+  transform: rotate(-2.6deg);
+}
+
+.p-food__ribbon {
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  z-index: 3;
+  display: block;
+  width: 42px;
+  height: auto;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.p-food__name-text {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  min-width: 190px;
+  padding: 5px 18px 6px 28px;
+  border: 1px solid rgba(#b94b36, 0.55);
+  border-radius: 8px;
+  background:
+    radial-gradient(
+      circle at 8px 50%,
+      $color-white 0 8px,
+      transparent 8.5px
+    ),
+    #f7efe6;
+  color: #b94b36;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba($color-black, 0.06);
+}
+
+.p-food__name-label {
+  display: inline-block;
+  color: #b94b36;
+  font-family: "Zen Old Mincho", serif;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  letter-spacing: -0.02em;
+  transform: scaleY(0.9);
+  transform-origin: center;
+}
+
+.p-food__text {
+  margin: 0;
+  color: rgba($color-black, 0.82);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.p-food__text br {
+  display: initial;
+}
+
+.p-food__section--shop .p-food__panel {
+  padding-bottom: 32px;
+}
+
+@include mq {
+  .p-food {
+    padding:
+      28px clamp(26px, 3vw, 42px) 100px;
+  }
+
+  .p-food__section + .p-food__section {
+    margin-top: 42px;
+  }
+
+  .p-food__section {
+    padding: 20px 42px 42px;
+    border-radius: 10px;
+    box-shadow:
+      0 -3px 10px rgba(255, 255, 255, 0.55),
+      0 8px 18px rgba($color-black, 0.15);
+  }
+
+  .p-food__header {
+    margin-bottom: 16px;
+  }
+
+  .p-food__title {
+    min-height: 66px;
+  }
+
+  .p-food__title-decoration {
+    width: 58px;
+  }
+
+  .p-food__title-logo {
+    max-width: 120px;
+    height: 46px;
+    margin-top: 12px;
+    margin-left: -5px;
+  }
+
+  .p-food__section--shop .p-food__title-logo {
+    max-width: 110px;
+  }
+
+  .p-food__title-sub {
+    margin-top: 14px;
+    margin-left: 8px;
+    font-size: 2rem;
+  }
+
+  .p-food__panel {
+    padding: 18px clamp(42px, 6vw, 76px) 72px;
+  }
+
+  .p-food__background-logo {
+    top: -24px;
+    right: -125px;
+    width: 360px;
+    opacity: 1;
+  }
+
+  .p-food__products {
+    gap: 18px;
+  }
+
+  .p-food__product {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(260px, 0.82fr);
+    gap: 16px;
+    align-items: center;
+  }
+
+  .p-food__product--reverse {
+    grid-template-columns: minmax(300px, 0.92fr) minmax(0, 1.08fr);
+  }
+
+  .p-food__product--reverse .p-food__figure {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .p-food__product--reverse .p-food__body {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .p-food__figure {
+    width: 100%;
+  }
+
+  .p-food__image-background {
+    min-height: 330px;
+    padding: 34px;
+  }
+
+  .p-food__image {
+    max-width: 430px;
+    max-height: 320px;
+  }
+
+  .p-food__body {
+    margin-top: 0;
+  }
+
+  .p-food__name {
+    min-height: 48px;
+    margin-bottom: 20px;
+    padding-left: 29px;
+  }
+
+  .p-food__ribbon {
+    width: 52px;
+  }
+
+  .p-food__name-text {
+    min-width: 230px;
+    padding: 6px 22px 7px 34px;
+    background:
+      radial-gradient(
+        circle at 14px 50%,
+        $color-white 0 9px,
+        transparent 9.5px
+      ),
+      #f7efe6;
+    font-size: clamp(1.5rem, 1.35vw, 1.8rem);
+  }
+
+  .p-food__text {
+    font-size: clamp(1.3rem, 1.05vw, 1.5rem);
+    line-height: 2;
+  }
+
+  .p-food__section--eat .p-food__product:nth-child(1) .p-food__image {
+    max-width: 380px;
+  }
+
+  .p-food__section--eat .p-food__product:nth-child(2) .p-food__image {
+    max-width: 390px;
+  }
+
+  .p-food__section--eat .p-food__product:nth-child(3) .p-food__image {
+    max-width: 430px;
+  }
+
+  .p-food__section--eat .p-food__product:nth-child(4) .p-food__image {
+    max-width: 420px;
+  }
+
+  .p-food__section--shop .p-food__product:nth-child(1) .p-food__image {
+    max-width: 360px;
+  }
+
+  .p-food__section--shop .p-food__product:nth-child(2) .p-food__image {
+    max-width: 410px;
+  }
+}
