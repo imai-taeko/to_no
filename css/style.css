@@ -424,6 +424,16 @@ address {
   margin-left: 10px;
 }
 
+.l-footer__notice {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  color: #6b625a;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   .l-footer__wave {
     top: 140px;
