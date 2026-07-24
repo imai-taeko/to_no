@@ -341,7 +341,6 @@ top: -20px;
   width: 100%;
 }
 
-// バナー画像の背面に敷く水色帯
 .p-event__slider-wrap::before {
   content: "";
   position: absolute;
@@ -365,12 +364,9 @@ top: -20px;
   background-color: transparent;
 }
 
-
-
 .p-event__list {
   position: relative;
   z-index: 1;
-
 }
 
 .p-event__item {
@@ -391,8 +387,8 @@ top: -20px;
 .p-event__image {
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
 
   height: 286px;
   padding: 18px 12px;
@@ -415,7 +411,6 @@ top: -20px;
 
   width: calc(100% - 28px);
   margin: 10px auto 0;
-
   padding: 14px 0 20px;
 
   background-color: #fff;
@@ -450,7 +445,7 @@ top: -20px;
   padding: 0;
   border: 0;
 
-  background: transparent;
+  background-color: transparent;
   transform: translateY(-50%);
   cursor: pointer;
 }
@@ -467,6 +462,13 @@ top: -20px;
   background-color: #273a62;
 }
 
+.p-event__button--prev {
+  left: 4px;
+}
+
+.p-event__button--next {
+  right: 4px;
+}
 
 .p-event__button--prev::before,
 .p-event__button--prev::after {
@@ -496,24 +498,20 @@ top: -20px;
   transform: rotate(-40deg);
 }
 
-.p-event__button--prev {
-  right: auto;
-  left: calc(50% - 548px);
-}
-
-.p-event__button--next {
-  right: calc(50% - 548px);
-  left: auto;
-}
-
-.p-event__button > svg {
-  display: none;
-}
-
 @media screen and (min-width: 1128px) {
   .p-event__slider {
     width: 1008px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .p-event__button--prev {
+    right: auto;
+    left: calc(50% - 548px);
+  }
+
+  .p-event__button--next {
+    right: calc(50% - 548px);
+    left: auto;
   }
 }
