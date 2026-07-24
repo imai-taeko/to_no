@@ -1230,7 +1230,7 @@ address {
   color: #061d8b;
   font-family: "Kiwi Maru", serif;
   font-size: 1.7rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
   opacity: 0.85;
 }
@@ -1333,7 +1333,7 @@ address {
   color: #000;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.9;
 }
 
@@ -1352,7 +1352,7 @@ address {
   color: #000;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.9;
 }
 
@@ -1955,6 +1955,7 @@ address {
   padding: 24px 14px 72px;
   overflow: hidden;
   background-color: #344766;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .p-access__inner {
@@ -1980,7 +1981,7 @@ address {
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
-  color: #061d8b;
+  color: #22207f;
 }
 
 .p-access__title-icon {
@@ -1993,9 +1994,8 @@ address {
 }
 
 .p-access__title-ja {
-  font-family: "Noto Serif JP", serif;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.06em;
 }
@@ -2030,9 +2030,8 @@ address {
   border-radius: 13px;
   background-color: #b93643;
   color: #fff;
-  font-family: "Noto Serif JP", serif;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
 }
 
@@ -2051,10 +2050,9 @@ address {
   position: relative;
   margin: 0 0 22px;
   padding-left: 17px;
-  color: #061d8b;
-  font-family: "Noto Serif JP", serif;
+  color: #22207f;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6;
 }
 
@@ -2064,7 +2062,7 @@ address {
   left: 0;
   width: 0;
   height: 0;
-  border-top: 8px solid #061d8b;
+  border-top: 8px solid #22207f;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
   content: "";
@@ -2114,10 +2112,10 @@ address {
   position: relative;
   display: inline-block;
   padding-left: 29px;
-  color: #061d8b;
+  color: #22207f;
   font-family: "Noto Serif JP", serif;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6;
   text-decoration: none;
 }
@@ -2128,8 +2126,8 @@ address {
   top: 0.78em;
   width: 8px;
   height: 8px;
-  border-top: 2px solid #061d8b;
-  border-right: 2px solid #061d8b;
+  border-top: 2px solid #22207f;
+  border-right: 2px solid #22207f;
   content: "";
   transform: translateY(-50%) rotate(45deg);
 }

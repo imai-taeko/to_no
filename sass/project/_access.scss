@@ -10,6 +10,7 @@
   padding: 24px 14px 72px;
   overflow: hidden;
   background-color: $color-main;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .p-access__inner {
@@ -37,7 +38,7 @@
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
-  color: $color-blue;
+  color: #22207f;
 }
 
 .p-access__title-icon {
@@ -49,9 +50,9 @@
 }
 
 .p-access__title-ja {
-  font-family: "Noto Serif JP", serif;
+  
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.06em;
 }
@@ -86,9 +87,9 @@
   border-radius: 13px;
   background-color: #b93643;
   color: $color-white;
-  font-family: "Noto Serif JP", serif;
+  
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
 }
 
@@ -107,10 +108,10 @@
   position: relative;
   margin: 0 0 22px;
   padding-left: 17px;
-  color: $color-blue;
-  font-family: "Noto Serif JP", serif;
+  color: #22207f;
+  
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6;
 }
 
@@ -120,7 +121,7 @@
   left: 0;
   width: 0;
   height: 0;
-  border-top: 8px solid $color-blue;
+  border-top: 8px solid #22207f;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
   content: "";
@@ -169,10 +170,10 @@
   position: relative;
   display: inline-block;
   padding-left: 29px;
-  color: $color-blue;
+  color: #22207f;
   font-family: "Noto Serif JP", serif;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6;
   text-decoration: none;
 }
@@ -183,8 +184,8 @@
   top: 0.78em;
   width: 8px;
   height: 8px;
-  border-top: 2px solid $color-blue;
-  border-right: 2px solid $color-blue;
+  border-top: 2px solid #22207f;
+  border-right: 2px solid #22207f;
   content: "";
   transform: translateY(-50%) rotate(45deg);
 }
