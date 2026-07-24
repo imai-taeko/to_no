@@ -569,7 +569,7 @@ address {
   width: auto;
   height: 100%;
   max-width: none;
-  transform: scale(1.18);
+  transform: scale(1.1);
   transform-origin: left top;
   filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.28));
 }
