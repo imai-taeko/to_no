@@ -38,7 +38,7 @@
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
-  color: #22207f;
+  color: #3d3d3d;
 }
 
 .p-access__title-icon {
@@ -105,27 +105,24 @@
 }
 
 .p-access__heading {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
   margin: 0 0 22px;
-  padding-left: 17px;
-  color: #22207f;
-  
+  color: #2f3b56;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.6;
 }
 
 .p-access__heading::before {
-  position: absolute;
-  top: 0.6em;
-  left: 0;
+  flex: 0 0 auto;
   width: 0;
   height: 0;
-  border-top: 8px solid #22207f;
+  border-top: 8px solid #2f3b56;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
   content: "";
-  transform: translateY(-50%);
 }
 
 .p-access__route-figure {
