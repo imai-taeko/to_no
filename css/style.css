@@ -558,7 +558,7 @@ address {
 
 .p-mv__map {
   position: absolute;
-  top: -2px;
+  top: 10px;
   bottom: 150px;
   left: 0;
   z-index: 30;
@@ -566,7 +566,7 @@ address {
 
 @media screen and (max-width: 375px) {
   .p-mv__map {
-    left: -28px;
+    left: -32px;
   }
 }
 .p-mv__map img {
