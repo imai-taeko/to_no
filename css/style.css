@@ -564,7 +564,7 @@ address {
   z-index: 30;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .p-mv__map {
     left: -100px;
   }
