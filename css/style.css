@@ -1233,7 +1233,7 @@ address {
 
 .p-story__list {
   display: grid;
-  gap: 54px;
+  gap: 32px;
 }
 
 .p-story__item {
@@ -1454,7 +1454,7 @@ address {
     padding: 28px clamp(26px, 3vw, 42px) 90px;
   }
   .p-story__list {
-    gap: 76px;
+    gap: 42px;
   }
   .p-story__item {
     padding: 22px 42px 32px;
