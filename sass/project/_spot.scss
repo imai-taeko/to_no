@@ -99,9 +99,6 @@
   line-height: 1.85;
 }
 
-.p-spot__text br {
-  display: none;
-}
 
 .p-spot__address {
   margin: 18px 0 0;
@@ -204,9 +201,7 @@
     line-height: 1.8;
   }
 
-  .p-spot__text br {
-    display: initial;
-  }
+  
 
   .p-spot__address {
     margin-top: 20px;

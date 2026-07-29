@@ -1073,10 +1073,6 @@ address {
   line-height: 1.85;
 }
 
-.p-spot__text br {
-  display: none;
-}
-
 .p-spot__address {
   margin: 18px 0 0;
   color: #273a62;
@@ -1158,9 +1154,6 @@ address {
   .p-spot__text {
     font-size: clamp(1.3rem, 1.15vw, 1.5rem);
     line-height: 1.8;
-  }
-  .p-spot__text br {
-    display: initial;
   }
   .p-spot__address {
     margin-top: 20px;
